@@ -1,0 +1,23 @@
+# Node
+node_modules/
+
+# Runtime data
+*.log
+*.pid
+run-history.jsonl
+
+# Session data
+sessions/
+
+# State cache
+state/
+
+# Pi project-local working dir
+.pi/
+
+# Extension manager cache
+.extmgr-cache/
+
+# OS
+.DS_Store
+Thumbs.db

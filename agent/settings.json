@@ -1,0 +1,16 @@
+{
+  "lastChangelogVersion": "0.75.3",
+  "packages": [
+    "npm:pi-mcp-adapter",
+    "npm:pi-web-access",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:pi-ask-user",
+    "npm:pi-tool-display",
+    "npm:@tmustier/pi-usage-extension",
+    "npm:pi-caveman",
+    "npm:pi-rtk-optimizer",
+    "npm:@tintinweb/pi-subagents"
+  ],
+  "editorPaddingX": 1,
+  "theme": "catppuccin-mocha"
+}
