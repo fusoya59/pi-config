@@ -11,6 +11,7 @@ argument-hint: "<feature idea>"
 ## Mode
 - Read-only during exploration, alignment, and presentation.
 - Single write: `.pi/plans/<slug>.md` once user confirms alignment.
+- Plan output is intentionally high-level. Do not produce a file-by-file implementation checklist; builder prompts refine this later after deeper code exploration.
 
 ## Flow
 
@@ -53,7 +54,7 @@ Output structured freeform markdown in conversation:
 ### Data Flow
 <if applicable>
 
-### Implementation Steps
+### Implementation Approach
 <ordered, high-level, actionable>
 
 ### Edge Cases & Risks

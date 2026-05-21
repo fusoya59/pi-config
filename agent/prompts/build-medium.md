@@ -1,6 +1,6 @@
 ---
 name: build-medium
-description: Implement a medium-scope feature from plan file. Explore, self-plan, light review, coder, user gates commit.
+description: Implement a medium-scope feature from high-level plan file. Explore, Planner refinement, light review, coder, user gates commit.
 argument-hint: "<plan-file-path>"
 ---
 
@@ -10,7 +10,7 @@ argument-hint: "<plan-file-path>"
 
 ### 1. Read Plan
 
-Read $1. Full understanding of scope and approach.
+Read high-level plan at $1. Understand scope, approach, risks, and suggested affected components.
 
 ### 2. Branch Strategy
 
@@ -22,15 +22,11 @@ Wait. Checkout branch.
 `Agent("Explore", model: "opencode-go/deepseek-v4-flash", thinking: "high", prompt: "<plan scope: affected files/modules>", desc: "Explore medium context")`
 Focus on files listed in plan — understand their structure, patterns, imports, and interfaces.
 
-### 4. Create Impl Plan (self-plan)
+### 4. Refine Impl Plan
 
-Main agent creates concrete implementation plan inline:
+`Agent("Planner", model: "opencode-go/deepseek-v4-flash", thinking: "high", prompt: "Convert high-level plan + Explore results into concrete implementation plan. Plan: <plan file $1>. Context: <explore results>. Include exact files to create/modify, step-by-step order, key data structures/API/component interfaces, edge cases, and test approach. Do not write code.", desc: "Refine medium plan")`
 
-- Exact files to create or modify
-- Step-by-step order
-- Key data structures, API changes, component interfaces
-- Edge case handling
-- No code generation — just the plan
+Planner outputs concrete implementation plan inline.
 
 ### 5. Light Plan Review
 
